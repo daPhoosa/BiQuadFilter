@@ -4,7 +4,7 @@ BiQuad IIR Low Pass Filter for Arduino
 Filters Arduino data type INT (int16_t).
 
 #### Object creation:
-BIQuadFilter filterObject(FreqCutoff, SampleRate);
+BiQuadFilter filterObject(FreqCutoff, SampleRate);
 
 #### The latest result is returned when adding data:
 filteredData = filterObject.in(rawData);
