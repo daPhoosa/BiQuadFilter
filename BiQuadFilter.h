@@ -22,7 +22,7 @@
 			int32_t mul(int16_t a, int16_t b); // integer mltiplication: int16_t * int16_t to int32_t
 			
 			int a0, a1, a2, b1, b2;	// coefficients 
-			int IN_1, IN_2, OUT_1, OUT_2 = 0; // delayed data
+			int IN_1 = 0, IN_2 = 0, OUT_1 = 0, OUT_2 = 0; // delayed data
 			
 			union TypeConverter
 			{

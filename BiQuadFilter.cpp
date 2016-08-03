@@ -10,7 +10,7 @@
 
 BiQuadFilter::BiQuadFilter(int cutOffFreq, int sampleFreq) // initialize filter
 {	
-	float Q = 0.7071;
+	float Q = 0.7071f;		// should not be larger than 1.0
 	float Fc = min(float(cutOffFreq), float((sampleFreq / 2) - 1));  // cutoff freq must not be above half of sample freq
 	float Fs = float(sampleFreq);
 	
@@ -24,7 +24,7 @@ BiQuadFilter::BiQuadFilter(int cutOffFreq, int sampleFreq) // initialize filter
 	
 	b1 = int( 2.0f * (R * R - 1.0f) * Normal * 16384.0f);
 	b2 = int((1.0f - R / Q + R * R) * Normal * 16384.0f);
-	
+
 }
 
 
